@@ -9,6 +9,7 @@ public class PlayerCollision : MonoBehaviour
     void OnCollisionEnter(Collision collisionInfo){
         if(collisionInfo.collider.tag == "Wall"){
             moveControl.enabled = false;
+            FindObjectOfType<GameMgr>().GameOver();
         }
     }
 }
