@@ -10,10 +10,17 @@ public class GameMgr : MonoBehaviour
 
     public float reStartDelay = 1.5f;
 
+    public GameObject completeLevelUI;
+
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    public void CompleteLevel(){
+        Debug.Log("Game Complete!!");
+        completeLevelUI.active = true;
     }
 
     public void GameOver(){
