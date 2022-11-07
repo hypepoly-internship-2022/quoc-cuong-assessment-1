@@ -21,11 +21,11 @@ public class PlayerMoveControl : MonoBehaviour
         rb.AddForce(0, 0, editForwardForce * Time.deltaTime);
         
         if(Input.GetKey("a")){
-            rb.AddForce(-editForwardForce * Time.deltaTime, 0, 0);
+            rb.AddForce(-editSizeWayForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
          if(Input.GetKey("d")){
-            rb.AddForce(editForwardForce * Time.deltaTime, 0, 0);
+            rb.AddForce(editSizeWayForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
